@@ -1,9 +1,12 @@
 <template>
-    <div  class="Chart">
-        <h6>CHART COMPONENT</h6>
-        <h2>{{header}}</h2>
-        <div :id="id"></div>
+  <div class="card text-center Chart">
+    <div class="card-header">
+      {{header}}
     </div>
+    <div class="card-body">
+      <div :id="id"></div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -42,9 +45,16 @@ export default {
 <style>
 
 .Chart {
-    border: 2px solid #ff00ff;
-    margin: 10px;
-    padding: 10px;
+  margin: 10px;
+}
+
+.vega-bind label span {
+    padding: 0 5px;
+    font-size: 0.9rem;
+}
+.vega-bind label select {
+    padding: 0 5px;
+    font-size: 0.8rem;
 }
 
 </style>
