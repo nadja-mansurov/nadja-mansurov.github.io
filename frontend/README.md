@@ -1,5 +1,10 @@
 # data-viz-frontend
 
+## Project deploy 
+```
+npm run deploy
+```
+
 ## Project setup
 ```
 npm install
