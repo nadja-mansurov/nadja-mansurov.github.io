@@ -1,4 +1,4 @@
-# nadja-mansurov.github.io# data-viz-frontend
+# data-viz-frontend
 
 Go to frontend folder and then...
 
@@ -34,7 +34,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ### How to add vega-images
 
 - Add new JSON-file to folder: */public/vega/{new_file_name}.json*
-- In {new_file_name}.json create structure: 
+- In *{new_file_name}.json* create structure: 
 ```javascript
     { 
         "header": "{image name to display}", 
@@ -45,3 +45,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - In *{new_file_name}.json* paste to "data"-filed copied source
 - Go to */public/urls.constant.json* and add new url
 - Reload/redeploy an application
+
+
+### References
+
+1. How to build and deploy a Vue.js app with GitHub Pages https://blog.logrocket.com/build-deploy-vue-js-app-github-pages/
