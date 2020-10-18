@@ -2,19 +2,32 @@
 
 import axios from 'axios';
 import Chart from '../Chart';
+import ImageCard from '../ImageCard';
 
 const URLS = require('../../../public/urls.constant');
-//import  chartData from "../../assets/vega/2.json";
+const IMAGES_URLS = require('../../../public/images.constant');
 
 export default {
   name: 'Main',
   components: {
-    Chart
+    Chart,
+    ImageCard
   },
   props: [],
   data () {
+    for (let i in IMAGES_URLS) {
+      this.images = this.images || [];
+      this.images.push({
+        header: IMAGES_URLS[i].header,
+        unique_id: `image_id_${i}`,
+        data: IMAGES_URLS[i].url,
+        description: IMAGES_URLS[i].description,
+      });
+    }
+
     return {
-      data: null
+      data: null,
+      images: this.images
     }
   },
   computed: {
@@ -30,12 +43,15 @@ export default {
             this.data.push({
               header: response.data.header,
               unique_id: `chart_id_${i}`,
-              data: response.data.data
+              data: response.data.data,
+              description: response.data.description,
             });
             return this.data;
           }
         });
     }
+
+    
   },
   methods: {
 

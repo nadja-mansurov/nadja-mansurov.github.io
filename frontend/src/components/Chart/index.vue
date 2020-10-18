@@ -5,6 +5,7 @@
     </div>
     <div class="card-body">
       <div :id="id"></div>
+      <p class="card-text">{{description}}</p>
     </div>
   </div>
 </template>
@@ -22,6 +23,7 @@ export default {
   data () {
     return {
         data: null,
+        description: this.code.description,
         id: `vis_${this.code.unique_id}`,
         header: this.code.header
     }
@@ -55,6 +57,10 @@ export default {
 .vega-bind label select {
     padding: 0 5px;
     font-size: 0.8rem;
+}
+
+.card-text {
+    font-size: 0.7rem;
 }
 
 </style>

@@ -3,5 +3,8 @@
   <div v-for="item in data" v-if="data && data.length > 0">
     <Chart v-bind:code="item" v-if="item"/>
   </div>
+  <div v-for="item in images" v-if="images && images.length > 0">
+    <ImageCard v-bind:code="item" v-if="item"/>
+  </div>
 </section>
 
