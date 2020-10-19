@@ -32,7 +32,7 @@ export default {
   },
   mounted () {
     embed(`#${this.id}`, this.code.data).then(result => {
-        this.data = result.view;
+      this.data = result.view;
     });
   },
   methods: {

@@ -5,7 +5,7 @@
     </div>
     <div class="card-body">
       <div :id="id">
-            <img :src="data" />
+            <img :src="data" width="617"/>
             <p class="card-text">{{description}}</p>
       </div>
     </div>
