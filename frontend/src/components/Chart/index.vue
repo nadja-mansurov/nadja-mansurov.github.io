@@ -50,6 +50,10 @@ export default {
   margin: 10px;
 }
 
+.Chart canvas {
+  max-width: 100%;
+}
+
 .vega-bind label span {
     padding: 0 5px;
     font-size: 0.9rem;

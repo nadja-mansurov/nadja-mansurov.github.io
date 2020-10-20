@@ -1,8 +1,22 @@
 
 <section class="Main">
-  <div v-for="item in data" v-if="data && data.length > 0">
-    <Chart v-bind:code="item" v-if="item"/>
+  <div v-for="item in data">
+    <div v-if="item.length > 1">
+      <div class="row">
+          <div class="col-sm-6" v-for="subitem in item">
+              <Chart v-bind:code="subitem" v-if="subitem"/>
+          </div>
+      </div>
+    </div>
+    <div v-if="item.length === 1">
+        <div class="row">
+            <div class="col-sm-12" v-for="subitem in item"> 
+                <Chart v-bind:code="subitem" v-if="subitem"/>
+            </div>
+        </div>
+      </div>
   </div>
+  
   <div v-for="item in images" v-if="images && images.length > 0">
     <ImageCard v-bind:code="item" v-if="item"/>
   </div>

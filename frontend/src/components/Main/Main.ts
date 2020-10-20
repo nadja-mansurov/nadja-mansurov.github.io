@@ -35,20 +35,25 @@ export default {
   },
   mounted () {
     for (let i in URLS) {
-      axios
-        .get(URLS[i])
-        .then(response => {
-          if (response.status === 200) {
-            this.data = this.data || [];
-            this.data.push({
-              header: response.data.header,
-              unique_id: `chart_id_${i}`,
-              data: response.data.data,
-              description: response.data.description,
-            });
-            return this.data;
-          }
-        });
+      this.data = this.data || [];
+      let arr = [];
+      for (let j in URLS[i]) { 
+        axios
+          .get(URLS[i][j])
+          .then(response => {
+            if (response.status === 200) {
+              arr.push({
+                header: response.data.header,
+                unique_id: `chart_id_${i}_${j}`,
+                data: response.data.data,
+                description: response.data.description,
+              });
+            }
+          });
+        }
+        setTimeout(() => {
+          this.data.push(arr);
+        }, 500); // TODO: what a shame, here should be subscription
     }
 
     
