@@ -1,6 +1,6 @@
 {
-    "header": "6 Trumps first 'chinese virus' tweet",
-    "description": "6 Trumps first 'chinese virus' tweet",
+    "header": "Steering the conversation: Trump's first 'chinese virus' tweet",
+    "description": "Of course no visualization project about twitter and the Coronavirus can be complete without Donald Trump. After his first tweet referring to SARS-CoV2 as “chinese virus” the mentions of this term skyrocketed on twitter. But his attempt at returning to 20th-century virus naming did not really work. It remained part of the conversation, but after some days of outrage, the mentions notably decreased. ",
     "centered": true,
     "data": {
         "$schema": "https://vega.github.io/schema/vega/v5.json",

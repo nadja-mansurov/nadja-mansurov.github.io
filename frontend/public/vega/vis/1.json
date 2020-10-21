@@ -1,6 +1,6 @@
 {
-    "header": "01 Total Coronavirus tweets and sampled tweets",
-    "description": "01 total vs sampled Tweets",
+    "header": "Corona & Twitter: A love story",
+    "description": "Twitter is not the real world! But when a global virus hits, twitter gets infected, too. On March 12th, almost 20 Million tweets about the virus were sent. The sampled dataset used for this analysis is much smaller and for most days contains about 13.5 thousand tweets. It also only covers the beginning of the worldwide pandemic up until April 8th. Feels like a loooong time ago.",
     "centered": true,
     "data": {
         "$schema": "https://vega.github.io/schema/vega/v5.json",

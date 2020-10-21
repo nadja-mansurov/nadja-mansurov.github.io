@@ -1,6 +1,6 @@
 {
-    "header": "32 Compare different keywords",
-    "description": "32_keyword_comp",
+    "header": "Twitter vs. Twitter",
+    "description": "The coronavirus brought some words and terms to the public discussion, that outside of epidemiology no one has heard before. The number of times these words appear in the sampled twitter data is a good representation of that. Explore some more keywords here and compare them to others. But remember: Correlation is not causation, words that appear at the same do not necessarily appear in the same tweets.",
     "centered": false,
     "float": "right",
     "data": {
