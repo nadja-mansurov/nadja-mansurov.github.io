@@ -9,5 +9,13 @@
   [
     "vega/vis/31.json",
     "vega/vis/32.json"
+  ],
+  [
+    "vega/vis/keywords_1.json",
+    "vega/vis/keywords_2.json"
+  ],
+  [
+    "vega/vis/keywords_3.json",
+    "vega/vis/keywords_4.json"
   ]
 ]

@@ -3,6 +3,7 @@
 import axios from 'axios';
 import Chart from '../Chart';
 import ImageCard from '../ImageCard';
+import ImageCarousel from '../ImageCarousel';
 
 const URLS = require('../../../public/urls.constant');
 const IMAGES_URLS = require('../../../public/images.constant');
@@ -11,7 +12,8 @@ export default {
   name: 'Main',
   components: {
     Chart,
-    ImageCard
+    ImageCard,
+    ImageCarousel
   },
   props: [],
   data () {
