@@ -5,8 +5,7 @@
         <div class="col-sm-12" style="text-align: center; margin: 10px 0 0;">
             <h4 v-if="index === 0">The data: a random selection of Coronavirus tweets</h4>
             <h4 v-if="index === 2">Stories: What keyword appearances tell us about the pandemic</h4>
-            <h4 v-if="index === 3">Discover: More interesting keywords to explore</h4>
-            <h4 v-if="index === 6">Advanced: A deeper look at the tweets</h4>
+            <h4 v-if="index === 6">Discover: More interesting keywords to explore</h4>
         </div>
     </div>
     
@@ -25,7 +24,11 @@
         </div>
       </div>
   </div>
-  
+  <div class="row">
+      <div class="col-sm-12" style="text-align: center; margin: 10px 0 0;">
+          <h4>Advanced: A deeper look at the tweets</h4>
+      </div>
+  </div>
   <div v-for="item in images" v-if="images && images.length > 0">
     <ImageCard v-bind:code="item" v-if="item"/>
   </div>
