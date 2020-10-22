@@ -49,6 +49,7 @@ export default {
                 unique_id: `chart_id_${i}_${j}`,
                 data: response.data.data,
                 description: response.data.description,
+                description2: response.data.description2 || null
               });
             }
           });

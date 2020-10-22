@@ -2,6 +2,6 @@
     {
         "header": "The language of Covid19: Which words appear together",
         "url": "/images/network.png",
-        "description": "Sometimes it can be interesting, to see which words appear together, as this gives more context than just knowing how often a word appears. This network shows how often two words appeared in the same tweets and also represents the total number of times the keyword was found in the dataset. The early state of the pandemic leads to a strong focus on China."
+        "description": "Knowing which words appear together can give more context than just knowing how often a word appears. This network shows how often two words were found in the same tweets and also how often the keyword was found in the dataset in total. The early state of the pandemic leads to a strong focus on China."
     }
 ]

@@ -1,7 +1,8 @@
 {
   "id": "22",
     "header": "Twitter & the public: A really short attention span",
-    "description": "Some say, the average human attention span is now less than the one of a goldfish! It is hard to confirm this claim using our twitter data, but there is some evidence that the attention span of twitter users is not too long. While big american news organizations are still ramping up their coverage for the wider public, the twitter community already starts losing interest in the virus again. ",
+    "description": "Some say, the average human attention span is now less than that of a goldfish! ", 
+    "description2": "It is hard to confirm this claim using our twitter data, but there is some evidence that the attention span of twitter users is not too long. While big American news organizations are still ramping up their coverage for the wider public, the twitter community already starts losing interest in the virus again. ",
     "centered": false,
     "float": "right",
     "data": {

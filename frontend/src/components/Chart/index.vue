@@ -6,6 +6,7 @@
     <div class="card-body">
       <div :id="id"></div>
       <p class="card-text">{{description}}</p>
+      <p class="card-text" v-if="description2">{{description2}}</p>
     </div>
   </div>
 </template>
@@ -24,6 +25,7 @@ export default {
     return {
         data: null,
         description: this.code.description,
+        description2: this.code.description2,
         id: `vis_${this.code.unique_id}`,
         header: this.code.header
     }

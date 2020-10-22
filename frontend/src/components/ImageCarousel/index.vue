@@ -20,6 +20,9 @@
         <h5>Date: {{item}}</h5>
         <img :src="'/images/slider/' + item+ '.jpg'" />
       </div>
+      <p class="card-text">
+        With something as fast moving as a virus pandemic, the discussion on twitter needs to adapt. Find the most used terms and phrases from our twitter data for each day in these worldclouds. The bigger a word is, the more often it has been used.
+      </p>
     </div>
   </div>
 </template>
@@ -82,5 +85,11 @@
 
   .image-container.active {
     display: block;
+  }
+
+
+  .card-text {
+      font-size: 0.8rem;
+      text-align: justify;
   }
 </style>
