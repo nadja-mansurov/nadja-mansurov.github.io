@@ -1,7 +1,7 @@
 <template>
   <div class="card text-center Chart">
     <div class="card-header">
-      {{header}}
+      <div>{{header}}</div>
     </div>
     <div class="card-body">
       <div :id="id"></div>
@@ -64,7 +64,22 @@ export default {
 }
 
 .card-text {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+    text-align: justify;
 }
 
+.card-header {
+  min-height: 75px;
+  text-align: center;
+  vertical-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-header div {
+  flex: 1 1;
+  text-align: center;
+}
 </style>

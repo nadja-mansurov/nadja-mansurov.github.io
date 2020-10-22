@@ -1,7 +1,7 @@
 <template>
   <div class="card text-center Chart">
     <div class="card-header">
-       8. Slider with twitter word cloud
+       Twitter word cloud day by day
     </div>
     <div class="card-body">
       <div class="row">
