@@ -1,7 +1,7 @@
 <template>
   <div class="card text-center Chart">
     <div class="card-header">
-       Twitter word cloud day by day
+       The language of Covid19: Most used terms daily
     </div>
     <div class="card-body">
       <div class="row">
