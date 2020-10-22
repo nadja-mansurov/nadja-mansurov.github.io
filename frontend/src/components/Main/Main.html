@@ -1,6 +1,15 @@
 
 <section class="Main">
-  <div v-for="item in data">
+  <div v-for="(item, index) in data">
+    <div class="row">
+        <div class="col-sm-12" style="text-align: center; margin: 10px 0 0;">
+            <h4 v-if="index === 0">The data: a random selection of Coronavirus tweets</h4>
+            <h4 v-if="index === 2">Stories: What keyword appearances tell us about the pandemic</h4>
+            <h4 v-if="index === 3">Discover: More interesting keywords to explore</h4>
+            <h4 v-if="index === 6">Advanced: A deeper look at the tweets</h4>
+        </div>
+    </div>
+    
     <div v-if="item.length > 1">
       <div class="row">
           <div class="col-sm-6" v-for="subitem in item">

@@ -4,308 +4,1302 @@
     "centered": false,
     "float": "left",
     "data": {
-        "config": {"view": {"continuousWidth": 400, "continuousHeight": 200}},
-        "layer": [
-          {
-            "mark": "circle",
-            "encoding": {
-              "color": {"type": "nominal", "field": "variable"},
-              "opacity": {"value": 0},
-              "tooltip": [
-                {"type": "nominal", "field": "variable"},
-                {"type": "quantitative", "field": "value"}
-              ],
-              "x": {
-                "type": "temporal",
-                "axis": {"format": "%b %Y", "title": "DATE"},
-                "field": "date"
-              },
-              "y": {"type": "quantitative", "field": "value"}
-            },
-            "selection": {
-              "selector040": {
-                "type": "single",
-                "on": "mouseover",
-                "fields": ["variable"],
-                "nearest": true
-              }
-            },
-            "width": 400
+      "config": {"view": {"continuousWidth": 400, "continuousHeight": 300}},
+      "layer": [
+        {
+          "mark": "circle",
+          "encoding": {
+            "color": {"type": "nominal", "field": "Keyword"},
+            "opacity": {"value": 0},
+            "tooltip": [
+              {"type": "nominal", "field": "Keyword"},
+              {"type": "quantitative", "field": "Keyword appearances"}
+            ],
+            "x": {"type": "temporal", "field": "date"},
+            "y": {
+              "type": "quantitative",
+              "axis": {"grid": false},
+              "field": "Keyword appearances",
+              "title": "Keyword appearances in dataset"
+            }
           },
-          {
-            "mark": "line",
-            "encoding": {
-              "color": {"type": "nominal", "field": "variable"},
-              "size": {
-                "condition": {"value": 1, "selection": {"not": "selector040"}},
-                "value": 3
-              },
-              "tooltip": [
-                {"type": "nominal", "field": "variable"},
-                {"type": "quantitative", "field": "value"}
-              ],
-              "x": {
-                "type": "temporal",
-                "axis": {"format": "%b %Y", "title": "DATE"},
-                "field": "date"
-              },
-              "y": {"type": "quantitative", "field": "value"}
+          "selection": {
+            "selector015": {
+              "type": "single",
+              "on": "mouseover",
+              "fields": ["Keyword"],
+              "nearest": true
+            }
+          },
+          "width": 600
+        },
+        {
+          "mark": "line",
+          "encoding": {
+            "color": {"type": "nominal", "field": "Keyword"},
+            "size": {
+              "condition": {"value": 1, "selection": {"not": "selector015"}},
+              "value": 3
+            },
+            "tooltip": [
+              {"type": "nominal", "field": "Keyword"},
+              {"type": "quantitative", "field": "Keyword appearances"}
+            ],
+            "x": {"type": "temporal", "field": "date"},
+            "y": {
+              "type": "quantitative",
+              "axis": {"grid": false},
+              "field": "Keyword appearances",
+              "title": "Keyword appearances in dataset"
             }
           }
-        ],
-        "data": {"name": "data-253c7dcaf84053ff442ccf78312bb32b"},
-        "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
-        "datasets": {
-          "data-253c7dcaf84053ff442ccf78312bb32b": [
-            {"date": "2020-01-20T00:00:00", "variable": "chinese virus", "value": 18},
-            {"date": "2020-01-21T00:00:00", "variable": "chinese virus", "value": 12},
-            {"date": "2020-01-22T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-01-23T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-01-24T00:00:00", "variable": "chinese virus", "value": 3},
-            {"date": "2020-01-25T00:00:00", "variable": "chinese virus", "value": 3},
-            {"date": "2020-01-26T00:00:00", "variable": "chinese virus", "value": 4},
-            {"date": "2020-01-27T00:00:00", "variable": "chinese virus", "value": 5},
-            {"date": "2020-01-28T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-01-29T00:00:00", "variable": "chinese virus", "value": 2},
-            {"date": "2020-01-30T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-01-31T00:00:00", "variable": "chinese virus", "value": 6},
-            {"date": "2020-02-01T00:00:00", "variable": "chinese virus", "value": 3},
-            {"date": "2020-02-02T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-02-03T00:00:00", "variable": "chinese virus", "value": 3},
-            {"date": "2020-02-04T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-02-05T00:00:00", "variable": "chinese virus", "value": 6},
-            {"date": "2020-02-06T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-02-07T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-02-08T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-02-09T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-02-10T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-02-11T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-02-12T00:00:00", "variable": "chinese virus", "value": 2},
-            {"date": "2020-02-13T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-02-14T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-02-15T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-02-16T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-02-17T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-02-18T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-02-19T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-02-20T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-02-21T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-02-22T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-02-23T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-02-24T00:00:00", "variable": "chinese virus", "value": 2},
-            {"date": "2020-02-25T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-02-26T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-02-27T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-02-28T00:00:00", "variable": "chinese virus", "value": 2},
-            {"date": "2020-02-29T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-03-01T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-03-02T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-03-03T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-03-04T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-03-05T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-03-06T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-03-07T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-03-08T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-03-09T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-03-10T00:00:00", "variable": "chinese virus", "value": 3},
-            {"date": "2020-03-11T00:00:00", "variable": "chinese virus", "value": 3},
-            {"date": "2020-03-12T00:00:00", "variable": "chinese virus", "value": 1},
-            {"date": "2020-03-13T00:00:00", "variable": "chinese virus", "value": 4},
-            {"date": "2020-03-14T00:00:00", "variable": "chinese virus", "value": 0},
-            {"date": "2020-03-15T00:00:00", "variable": "chinese virus", "value": 0},
-            {
-              "date": "2020-03-16T00:00:00",
-              "variable": "chinese virus",
-              "value": 145
-            },
-            {"date": "2020-03-17T00:00:00", "variable": "chinese virus", "value": 83},
-            {
-              "date": "2020-03-18T00:00:00",
-              "variable": "chinese virus",
-              "value": 161
-            },
-            {"date": "2020-03-19T00:00:00", "variable": "chinese virus", "value": 67},
-            {"date": "2020-03-20T00:00:00", "variable": "chinese virus", "value": 47},
-            {"date": "2020-03-21T00:00:00", "variable": "chinese virus", "value": 29},
-            {"date": "2020-03-22T00:00:00", "variable": "chinese virus", "value": 48},
-            {"date": "2020-03-23T00:00:00", "variable": "chinese virus", "value": 44},
-            {"date": "2020-03-24T00:00:00", "variable": "chinese virus", "value": 29},
-            {"date": "2020-03-25T00:00:00", "variable": "chinese virus", "value": 31},
-            {"date": "2020-03-26T00:00:00", "variable": "chinese virus", "value": 58},
-            {"date": "2020-03-27T00:00:00", "variable": "chinese virus", "value": 17},
-            {"date": "2020-03-28T00:00:00", "variable": "chinese virus", "value": 20},
-            {"date": "2020-03-29T00:00:00", "variable": "chinese virus", "value": 20},
-            {"date": "2020-03-30T00:00:00", "variable": "chinese virus", "value": 22},
-            {"date": "2020-03-31T00:00:00", "variable": "chinese virus", "value": 18},
-            {"date": "2020-04-01T00:00:00", "variable": "chinese virus", "value": 23},
-            {"date": "2020-04-02T00:00:00", "variable": "chinese virus", "value": 20},
-            {"date": "2020-04-03T00:00:00", "variable": "chinese virus", "value": 13},
-            {"date": "2020-04-04T00:00:00", "variable": "chinese virus", "value": 19},
-            {"date": "2020-04-05T00:00:00", "variable": "chinese virus", "value": 13},
-            {"date": "2020-04-06T00:00:00", "variable": "chinese virus", "value": 21},
-            {"date": "2020-04-07T00:00:00", "variable": "chinese virus", "value": 13},
-            {"date": "2020-04-08T00:00:00", "variable": "chinese virus", "value": 21},
-            {"date": "2020-01-20T00:00:00", "variable": "Wuhan", "value": 1310},
-            {"date": "2020-01-21T00:00:00", "variable": "Wuhan", "value": 2138},
-            {"date": "2020-01-22T00:00:00", "variable": "Wuhan", "value": 1989},
-            {"date": "2020-01-23T00:00:00", "variable": "Wuhan", "value": 1536},
-            {"date": "2020-01-24T00:00:00", "variable": "Wuhan", "value": 1305},
-            {"date": "2020-01-25T00:00:00", "variable": "Wuhan", "value": 1127},
-            {"date": "2020-01-26T00:00:00", "variable": "Wuhan", "value": 1252},
-            {"date": "2020-01-27T00:00:00", "variable": "Wuhan", "value": 1068},
-            {"date": "2020-01-28T00:00:00", "variable": "Wuhan", "value": 882},
-            {"date": "2020-01-29T00:00:00", "variable": "Wuhan", "value": 911},
-            {"date": "2020-01-30T00:00:00", "variable": "Wuhan", "value": 863},
-            {"date": "2020-01-31T00:00:00", "variable": "Wuhan", "value": 657},
-            {"date": "2020-02-01T00:00:00", "variable": "Wuhan", "value": 946},
-            {"date": "2020-02-02T00:00:00", "variable": "Wuhan", "value": 1204},
-            {"date": "2020-02-03T00:00:00", "variable": "Wuhan", "value": 1038},
-            {"date": "2020-02-04T00:00:00", "variable": "Wuhan", "value": 935},
-            {"date": "2020-02-05T00:00:00", "variable": "Wuhan", "value": 920},
-            {"date": "2020-02-06T00:00:00", "variable": "Wuhan", "value": 1479},
-            {"date": "2020-02-07T00:00:00", "variable": "Wuhan", "value": 998},
-            {"date": "2020-02-08T00:00:00", "variable": "Wuhan", "value": 1087},
-            {"date": "2020-02-09T00:00:00", "variable": "Wuhan", "value": 1021},
-            {"date": "2020-02-10T00:00:00", "variable": "Wuhan", "value": 738},
-            {"date": "2020-02-11T00:00:00", "variable": "Wuhan", "value": 881},
-            {"date": "2020-02-12T00:00:00", "variable": "Wuhan", "value": 660},
-            {"date": "2020-02-13T00:00:00", "variable": "Wuhan", "value": 652},
-            {"date": "2020-02-14T00:00:00", "variable": "Wuhan", "value": 820},
-            {"date": "2020-02-15T00:00:00", "variable": "Wuhan", "value": 921},
-            {"date": "2020-02-16T00:00:00", "variable": "Wuhan", "value": 973},
-            {"date": "2020-02-17T00:00:00", "variable": "Wuhan", "value": 724},
-            {"date": "2020-02-18T00:00:00", "variable": "Wuhan", "value": 898},
-            {"date": "2020-02-19T00:00:00", "variable": "Wuhan", "value": 705},
-            {"date": "2020-02-20T00:00:00", "variable": "Wuhan", "value": 590},
-            {"date": "2020-02-21T00:00:00", "variable": "Wuhan", "value": 466},
-            {"date": "2020-02-22T00:00:00", "variable": "Wuhan", "value": 111},
-            {"date": "2020-02-23T00:00:00", "variable": "Wuhan", "value": 444},
-            {"date": "2020-02-24T00:00:00", "variable": "Wuhan", "value": 549},
-            {"date": "2020-02-25T00:00:00", "variable": "Wuhan", "value": 156},
-            {"date": "2020-02-26T00:00:00", "variable": "Wuhan", "value": 94},
-            {"date": "2020-02-27T00:00:00", "variable": "Wuhan", "value": 100},
-            {"date": "2020-02-28T00:00:00", "variable": "Wuhan", "value": 93},
-            {"date": "2020-02-29T00:00:00", "variable": "Wuhan", "value": 107},
-            {"date": "2020-03-01T00:00:00", "variable": "Wuhan", "value": 141},
-            {"date": "2020-03-02T00:00:00", "variable": "Wuhan", "value": 122},
-            {"date": "2020-03-03T00:00:00", "variable": "Wuhan", "value": 95},
-            {"date": "2020-03-04T00:00:00", "variable": "Wuhan", "value": 153},
-            {"date": "2020-03-05T00:00:00", "variable": "Wuhan", "value": 100},
-            {"date": "2020-03-06T00:00:00", "variable": "Wuhan", "value": 64},
-            {"date": "2020-03-07T00:00:00", "variable": "Wuhan", "value": 106},
-            {"date": "2020-03-08T00:00:00", "variable": "Wuhan", "value": 21},
-            {"date": "2020-03-09T00:00:00", "variable": "Wuhan", "value": 109},
-            {"date": "2020-03-10T00:00:00", "variable": "Wuhan", "value": 108},
-            {"date": "2020-03-11T00:00:00", "variable": "Wuhan", "value": 82},
-            {"date": "2020-03-12T00:00:00", "variable": "Wuhan", "value": 78},
-            {"date": "2020-03-13T00:00:00", "variable": "Wuhan", "value": 183},
-            {"date": "2020-03-14T00:00:00", "variable": "Wuhan", "value": 92},
-            {"date": "2020-03-15T00:00:00", "variable": "Wuhan", "value": 62},
-            {"date": "2020-03-16T00:00:00", "variable": "Wuhan", "value": 81},
-            {"date": "2020-03-17T00:00:00", "variable": "Wuhan", "value": 106},
-            {"date": "2020-03-18T00:00:00", "variable": "Wuhan", "value": 159},
-            {"date": "2020-03-19T00:00:00", "variable": "Wuhan", "value": 134},
-            {"date": "2020-03-20T00:00:00", "variable": "Wuhan", "value": 75},
-            {"date": "2020-03-21T00:00:00", "variable": "Wuhan", "value": 94},
-            {"date": "2020-03-22T00:00:00", "variable": "Wuhan", "value": 83},
-            {"date": "2020-03-23T00:00:00", "variable": "Wuhan", "value": 88},
-            {"date": "2020-03-24T00:00:00", "variable": "Wuhan", "value": 68},
-            {"date": "2020-03-25T00:00:00", "variable": "Wuhan", "value": 93},
-            {"date": "2020-03-26T00:00:00", "variable": "Wuhan", "value": 66},
-            {"date": "2020-03-27T00:00:00", "variable": "Wuhan", "value": 90},
-            {"date": "2020-03-28T00:00:00", "variable": "Wuhan", "value": 113},
-            {"date": "2020-03-29T00:00:00", "variable": "Wuhan", "value": 120},
-            {"date": "2020-03-30T00:00:00", "variable": "Wuhan", "value": 87},
-            {"date": "2020-03-31T00:00:00", "variable": "Wuhan", "value": 71},
-            {"date": "2020-04-01T00:00:00", "variable": "Wuhan", "value": 110},
-            {"date": "2020-04-02T00:00:00", "variable": "Wuhan", "value": 103},
-            {"date": "2020-04-03T00:00:00", "variable": "Wuhan", "value": 96},
-            {"date": "2020-04-04T00:00:00", "variable": "Wuhan", "value": 94},
-            {"date": "2020-04-05T00:00:00", "variable": "Wuhan", "value": 74},
-            {"date": "2020-04-06T00:00:00", "variable": "Wuhan", "value": 79},
-            {"date": "2020-04-07T00:00:00", "variable": "Wuhan", "value": 157},
-            {"date": "2020-04-08T00:00:00", "variable": "Wuhan", "value": 140},
-            {"date": "2020-01-20T00:00:00", "variable": "trump", "value": 36},
-            {"date": "2020-01-21T00:00:00", "variable": "trump", "value": 151},
-            {"date": "2020-01-22T00:00:00", "variable": "trump", "value": 153},
-            {"date": "2020-01-23T00:00:00", "variable": "trump", "value": 128},
-            {"date": "2020-01-24T00:00:00", "variable": "trump", "value": 194},
-            {"date": "2020-01-25T00:00:00", "variable": "trump", "value": 94},
-            {"date": "2020-01-26T00:00:00", "variable": "trump", "value": 215},
-            {"date": "2020-01-27T00:00:00", "variable": "trump", "value": 147},
-            {"date": "2020-01-28T00:00:00", "variable": "trump", "value": 168},
-            {"date": "2020-01-29T00:00:00", "variable": "trump", "value": 129},
-            {"date": "2020-01-30T00:00:00", "variable": "trump", "value": 247},
-            {"date": "2020-01-31T00:00:00", "variable": "trump", "value": 386},
-            {"date": "2020-02-01T00:00:00", "variable": "trump", "value": 242},
-            {"date": "2020-02-02T00:00:00", "variable": "trump", "value": 368},
-            {"date": "2020-02-03T00:00:00", "variable": "trump", "value": 147},
-            {"date": "2020-02-04T00:00:00", "variable": "trump", "value": 166},
-            {"date": "2020-02-05T00:00:00", "variable": "trump", "value": 252},
-            {"date": "2020-02-06T00:00:00", "variable": "trump", "value": 240},
-            {"date": "2020-02-07T00:00:00", "variable": "trump", "value": 224},
-            {"date": "2020-02-08T00:00:00", "variable": "trump", "value": 292},
-            {"date": "2020-02-09T00:00:00", "variable": "trump", "value": 286},
-            {"date": "2020-02-10T00:00:00", "variable": "trump", "value": 514},
-            {"date": "2020-02-11T00:00:00", "variable": "trump", "value": 345},
-            {"date": "2020-02-12T00:00:00", "variable": "trump", "value": 296},
-            {"date": "2020-02-13T00:00:00", "variable": "trump", "value": 285},
-            {"date": "2020-02-14T00:00:00", "variable": "trump", "value": 372},
-            {"date": "2020-02-15T00:00:00", "variable": "trump", "value": 348},
-            {"date": "2020-02-16T00:00:00", "variable": "trump", "value": 441},
-            {"date": "2020-02-17T00:00:00", "variable": "trump", "value": 321},
-            {"date": "2020-02-18T00:00:00", "variable": "trump", "value": 316},
-            {"date": "2020-02-19T00:00:00", "variable": "trump", "value": 310},
-            {"date": "2020-02-20T00:00:00", "variable": "trump", "value": 350},
-            {"date": "2020-02-21T00:00:00", "variable": "trump", "value": 307},
-            {"date": "2020-02-22T00:00:00", "variable": "trump", "value": 70},
-            {"date": "2020-02-23T00:00:00", "variable": "trump", "value": 507},
-            {"date": "2020-02-24T00:00:00", "variable": "trump", "value": 1802},
-            {"date": "2020-02-25T00:00:00", "variable": "trump", "value": 908},
-            {"date": "2020-02-26T00:00:00", "variable": "trump", "value": 3498},
-            {"date": "2020-02-27T00:00:00", "variable": "trump", "value": 1284},
-            {"date": "2020-02-28T00:00:00", "variable": "trump", "value": 1165},
-            {"date": "2020-02-29T00:00:00", "variable": "trump", "value": 1401},
-            {"date": "2020-03-01T00:00:00", "variable": "trump", "value": 960},
-            {"date": "2020-03-02T00:00:00", "variable": "trump", "value": 877},
-            {"date": "2020-03-03T00:00:00", "variable": "trump", "value": 832},
-            {"date": "2020-03-04T00:00:00", "variable": "trump", "value": 642},
-            {"date": "2020-03-05T00:00:00", "variable": "trump", "value": 818},
-            {"date": "2020-03-06T00:00:00", "variable": "trump", "value": 937},
-            {"date": "2020-03-07T00:00:00", "variable": "trump", "value": 841},
-            {"date": "2020-03-08T00:00:00", "variable": "trump", "value": 334},
-            {"date": "2020-03-09T00:00:00", "variable": "trump", "value": 1240},
-            {"date": "2020-03-10T00:00:00", "variable": "trump", "value": 727},
-            {"date": "2020-03-11T00:00:00", "variable": "trump", "value": 860},
-            {"date": "2020-03-12T00:00:00", "variable": "trump", "value": 592},
-            {"date": "2020-03-13T00:00:00", "variable": "trump", "value": 1550},
-            {"date": "2020-03-14T00:00:00", "variable": "trump", "value": 1396},
-            {"date": "2020-03-15T00:00:00", "variable": "trump", "value": 536},
-            {"date": "2020-03-16T00:00:00", "variable": "trump", "value": 618},
-            {"date": "2020-03-17T00:00:00", "variable": "trump", "value": 446},
-            {"date": "2020-03-18T00:00:00", "variable": "trump", "value": 711},
-            {"date": "2020-03-19T00:00:00", "variable": "trump", "value": 592},
-            {"date": "2020-03-20T00:00:00", "variable": "trump", "value": 580},
-            {"date": "2020-03-21T00:00:00", "variable": "trump", "value": 593},
-            {"date": "2020-03-22T00:00:00", "variable": "trump", "value": 815},
-            {"date": "2020-03-23T00:00:00", "variable": "trump", "value": 1121},
-            {"date": "2020-03-24T00:00:00", "variable": "trump", "value": 792},
-            {"date": "2020-03-25T00:00:00", "variable": "trump", "value": 799},
-            {"date": "2020-03-26T00:00:00", "variable": "trump", "value": 916},
-            {"date": "2020-03-27T00:00:00", "variable": "trump", "value": 902},
-            {"date": "2020-03-28T00:00:00", "variable": "trump", "value": 712},
-            {"date": "2020-03-29T00:00:00", "variable": "trump", "value": 1257},
-            {"date": "2020-03-30T00:00:00", "variable": "trump", "value": 906},
-            {"date": "2020-03-31T00:00:00", "variable": "trump", "value": 1191},
-            {"date": "2020-04-01T00:00:00", "variable": "trump", "value": 1034},
-            {"date": "2020-04-02T00:00:00", "variable": "trump", "value": 1442},
-            {"date": "2020-04-03T00:00:00", "variable": "trump", "value": 820},
-            {"date": "2020-04-04T00:00:00", "variable": "trump", "value": 1002},
-            {"date": "2020-04-05T00:00:00", "variable": "trump", "value": 1394},
-            {"date": "2020-04-06T00:00:00", "variable": "trump", "value": 964},
-            {"date": "2020-04-07T00:00:00", "variable": "trump", "value": 1108},
-            {"date": "2020-04-08T00:00:00", "variable": "trump", "value": 861}
-          ]
         }
+      ],
+      "data": {"name": "data-cf0d3602d97339a779ab34bb4f24b174"},
+      "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+      "datasets": {
+        "data-cf0d3602d97339a779ab34bb4f24b174": [
+          {
+            "date": "2020-01-20",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-21",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-22",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-23",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-24",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-25",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-26",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-27",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-28",
+            "Keyword": "social distancing",
+            "Keyword appearances": 1
+          },
+          {
+            "date": "2020-01-29",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-30",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-31",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-01",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-02",
+            "Keyword": "social distancing",
+            "Keyword appearances": 2
+          },
+          {
+            "date": "2020-02-03",
+            "Keyword": "social distancing",
+            "Keyword appearances": 6
+          },
+          {
+            "date": "2020-02-04",
+            "Keyword": "social distancing",
+            "Keyword appearances": 1
+          },
+          {
+            "date": "2020-02-05",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-06",
+            "Keyword": "social distancing",
+            "Keyword appearances": 1
+          },
+          {
+            "date": "2020-02-07",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-08",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-09",
+            "Keyword": "social distancing",
+            "Keyword appearances": 1
+          },
+          {
+            "date": "2020-02-10",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-11",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-12",
+            "Keyword": "social distancing",
+            "Keyword appearances": 3
+          },
+          {
+            "date": "2020-02-13",
+            "Keyword": "social distancing",
+            "Keyword appearances": 3
+          },
+          {
+            "date": "2020-02-14",
+            "Keyword": "social distancing",
+            "Keyword appearances": 1
+          },
+          {
+            "date": "2020-02-15",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-16",
+            "Keyword": "social distancing",
+            "Keyword appearances": 1
+          },
+          {
+            "date": "2020-02-17",
+            "Keyword": "social distancing",
+            "Keyword appearances": 2
+          },
+          {
+            "date": "2020-02-18",
+            "Keyword": "social distancing",
+            "Keyword appearances": 1
+          },
+          {
+            "date": "2020-02-19",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-20",
+            "Keyword": "social distancing",
+            "Keyword appearances": 1
+          },
+          {
+            "date": "2020-02-21",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-22",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-23",
+            "Keyword": "social distancing",
+            "Keyword appearances": 1
+          },
+          {
+            "date": "2020-02-24",
+            "Keyword": "social distancing",
+            "Keyword appearances": 3
+          },
+          {
+            "date": "2020-02-25",
+            "Keyword": "social distancing",
+            "Keyword appearances": 1
+          },
+          {
+            "date": "2020-02-26",
+            "Keyword": "social distancing",
+            "Keyword appearances": 1
+          },
+          {
+            "date": "2020-02-27",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-28",
+            "Keyword": "social distancing",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-29",
+            "Keyword": "social distancing",
+            "Keyword appearances": 2
+          },
+          {
+            "date": "2020-03-01",
+            "Keyword": "social distancing",
+            "Keyword appearances": 3
+          },
+          {
+            "date": "2020-03-02",
+            "Keyword": "social distancing",
+            "Keyword appearances": 6
+          },
+          {
+            "date": "2020-03-03",
+            "Keyword": "social distancing",
+            "Keyword appearances": 4
+          },
+          {
+            "date": "2020-03-04",
+            "Keyword": "social distancing",
+            "Keyword appearances": 4
+          },
+          {
+            "date": "2020-03-05",
+            "Keyword": "social distancing",
+            "Keyword appearances": 3
+          },
+          {
+            "date": "2020-03-06",
+            "Keyword": "social distancing",
+            "Keyword appearances": 7
+          },
+          {
+            "date": "2020-03-07",
+            "Keyword": "social distancing",
+            "Keyword appearances": 8
+          },
+          {
+            "date": "2020-03-08",
+            "Keyword": "social distancing",
+            "Keyword appearances": 6
+          },
+          {
+            "date": "2020-03-09",
+            "Keyword": "social distancing",
+            "Keyword appearances": 13
+          },
+          {
+            "date": "2020-03-10",
+            "Keyword": "social distancing",
+            "Keyword appearances": 40
+          },
+          {
+            "date": "2020-03-11",
+            "Keyword": "social distancing",
+            "Keyword appearances": 48
+          },
+          {
+            "date": "2020-03-12",
+            "Keyword": "social distancing",
+            "Keyword appearances": 28
+          },
+          {
+            "date": "2020-03-13",
+            "Keyword": "social distancing",
+            "Keyword appearances": 84
+          },
+          {
+            "date": "2020-03-14",
+            "Keyword": "social distancing",
+            "Keyword appearances": 108
+          },
+          {
+            "date": "2020-03-15",
+            "Keyword": "social distancing",
+            "Keyword appearances": 138
+          },
+          {
+            "date": "2020-03-16",
+            "Keyword": "social distancing",
+            "Keyword appearances": 132
+          },
+          {
+            "date": "2020-03-17",
+            "Keyword": "social distancing",
+            "Keyword appearances": 135
+          },
+          {
+            "date": "2020-03-18",
+            "Keyword": "social distancing",
+            "Keyword appearances": 152
+          },
+          {
+            "date": "2020-03-19",
+            "Keyword": "social distancing",
+            "Keyword appearances": 117
+          },
+          {
+            "date": "2020-03-20",
+            "Keyword": "social distancing",
+            "Keyword appearances": 120
+          },
+          {
+            "date": "2020-03-21",
+            "Keyword": "social distancing",
+            "Keyword appearances": 125
+          },
+          {
+            "date": "2020-03-22",
+            "Keyword": "social distancing",
+            "Keyword appearances": 191
+          },
+          {
+            "date": "2020-03-23",
+            "Keyword": "social distancing",
+            "Keyword appearances": 162
+          },
+          {
+            "date": "2020-03-24",
+            "Keyword": "social distancing",
+            "Keyword appearances": 134
+          },
+          {
+            "date": "2020-03-25",
+            "Keyword": "social distancing",
+            "Keyword appearances": 134
+          },
+          {
+            "date": "2020-03-26",
+            "Keyword": "social distancing",
+            "Keyword appearances": 127
+          },
+          {
+            "date": "2020-03-27",
+            "Keyword": "social distancing",
+            "Keyword appearances": 134
+          },
+          {
+            "date": "2020-03-28",
+            "Keyword": "social distancing",
+            "Keyword appearances": 96
+          },
+          {
+            "date": "2020-03-29",
+            "Keyword": "social distancing",
+            "Keyword appearances": 231
+          },
+          {
+            "date": "2020-03-30",
+            "Keyword": "social distancing",
+            "Keyword appearances": 173
+          },
+          {
+            "date": "2020-03-31",
+            "Keyword": "social distancing",
+            "Keyword appearances": 163
+          },
+          {
+            "date": "2020-04-01",
+            "Keyword": "social distancing",
+            "Keyword appearances": 131
+          },
+          {
+            "date": "2020-04-02",
+            "Keyword": "social distancing",
+            "Keyword appearances": 140
+          },
+          {
+            "date": "2020-04-03",
+            "Keyword": "social distancing",
+            "Keyword appearances": 113
+          },
+          {
+            "date": "2020-04-04",
+            "Keyword": "social distancing",
+            "Keyword appearances": 109
+          },
+          {
+            "date": "2020-04-05",
+            "Keyword": "social distancing",
+            "Keyword appearances": 121
+          },
+          {
+            "date": "2020-04-06",
+            "Keyword": "social distancing",
+            "Keyword appearances": 124
+          },
+          {
+            "date": "2020-04-07",
+            "Keyword": "social distancing",
+            "Keyword appearances": 134
+          },
+          {
+            "date": "2020-04-08",
+            "Keyword": "social distancing",
+            "Keyword appearances": 138
+          },
+          {
+            "date": "2020-01-20",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-21",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-22",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-23",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-24",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-25",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-26",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-27",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-28",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-29",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-30",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-01-31",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-01",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-02",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-03",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-04",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-05",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-06",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-07",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-08",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-09",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-10",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-11",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-12",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-13",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-14",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-15",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-16",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-17",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-18",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-19",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-20",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-21",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-22",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-23",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-24",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-25",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-26",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-27",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 1
+          },
+          {
+            "date": "2020-02-28",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-02-29",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-03-01",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-03-02",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-03-03",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-03-04",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-03-05",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 2
+          },
+          {
+            "date": "2020-03-06",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-03-07",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 0
+          },
+          {
+            "date": "2020-03-08",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 3
+          },
+          {
+            "date": "2020-03-09",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 5
+          },
+          {
+            "date": "2020-03-10",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 25
+          },
+          {
+            "date": "2020-03-11",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 20
+          },
+          {
+            "date": "2020-03-12",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 14
+          },
+          {
+            "date": "2020-03-13",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 48
+          },
+          {
+            "date": "2020-03-14",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 35
+          },
+          {
+            "date": "2020-03-15",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 70
+          },
+          {
+            "date": "2020-03-16",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 52
+          },
+          {
+            "date": "2020-03-17",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 56
+          },
+          {
+            "date": "2020-03-18",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 33
+          },
+          {
+            "date": "2020-03-19",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 29
+          },
+          {
+            "date": "2020-03-20",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 24
+          },
+          {
+            "date": "2020-03-21",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 24
+          },
+          {
+            "date": "2020-03-22",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 44
+          },
+          {
+            "date": "2020-03-23",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 18
+          },
+          {
+            "date": "2020-03-24",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 26
+          },
+          {
+            "date": "2020-03-25",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 24
+          },
+          {
+            "date": "2020-03-26",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 26
+          },
+          {
+            "date": "2020-03-27",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 28
+          },
+          {
+            "date": "2020-03-28",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 17
+          },
+          {
+            "date": "2020-03-29",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 12
+          },
+          {
+            "date": "2020-03-30",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 33
+          },
+          {
+            "date": "2020-03-31",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 29
+          },
+          {
+            "date": "2020-04-01",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 28
+          },
+          {
+            "date": "2020-04-02",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 41
+          },
+          {
+            "date": "2020-04-03",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 16
+          },
+          {
+            "date": "2020-04-04",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 28
+          },
+          {
+            "date": "2020-04-05",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 16
+          },
+          {
+            "date": "2020-04-06",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 23
+          },
+          {
+            "date": "2020-04-07",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 32
+          },
+          {
+            "date": "2020-04-08",
+            "Keyword": "Flatten the curve",
+            "Keyword appearances": 36
+          },
+          {"date": "2020-01-20", "Keyword": "travel ban", "Keyword appearances": 2},
+          {
+            "date": "2020-01-21",
+            "Keyword": "travel ban",
+            "Keyword appearances": 10
+          },
+          {
+            "date": "2020-01-22",
+            "Keyword": "travel ban",
+            "Keyword appearances": 38
+          },
+          {
+            "date": "2020-01-23",
+            "Keyword": "travel ban",
+            "Keyword appearances": 30
+          },
+          {
+            "date": "2020-01-24",
+            "Keyword": "travel ban",
+            "Keyword appearances": 33
+          },
+          {
+            "date": "2020-01-25",
+            "Keyword": "travel ban",
+            "Keyword appearances": 14
+          },
+          {
+            "date": "2020-01-26",
+            "Keyword": "travel ban",
+            "Keyword appearances": 11
+          },
+          {"date": "2020-01-27", "Keyword": "travel ban", "Keyword appearances": 7},
+          {
+            "date": "2020-01-28",
+            "Keyword": "travel ban",
+            "Keyword appearances": 26
+          },
+          {
+            "date": "2020-01-29",
+            "Keyword": "travel ban",
+            "Keyword appearances": 13
+          },
+          {
+            "date": "2020-01-30",
+            "Keyword": "travel ban",
+            "Keyword appearances": 20
+          },
+          {
+            "date": "2020-01-31",
+            "Keyword": "travel ban",
+            "Keyword appearances": 43
+          },
+          {
+            "date": "2020-02-01",
+            "Keyword": "travel ban",
+            "Keyword appearances": 52
+          },
+          {
+            "date": "2020-02-02",
+            "Keyword": "travel ban",
+            "Keyword appearances": 45
+          },
+          {
+            "date": "2020-02-03",
+            "Keyword": "travel ban",
+            "Keyword appearances": 33
+          },
+          {
+            "date": "2020-02-04",
+            "Keyword": "travel ban",
+            "Keyword appearances": 30
+          },
+          {
+            "date": "2020-02-05",
+            "Keyword": "travel ban",
+            "Keyword appearances": 17
+          },
+          {
+            "date": "2020-02-06",
+            "Keyword": "travel ban",
+            "Keyword appearances": 26
+          },
+          {
+            "date": "2020-02-07",
+            "Keyword": "travel ban",
+            "Keyword appearances": 14
+          },
+          {
+            "date": "2020-02-08",
+            "Keyword": "travel ban",
+            "Keyword appearances": 12
+          },
+          {"date": "2020-02-09", "Keyword": "travel ban", "Keyword appearances": 7},
+          {
+            "date": "2020-02-10",
+            "Keyword": "travel ban",
+            "Keyword appearances": 21
+          },
+          {
+            "date": "2020-02-11",
+            "Keyword": "travel ban",
+            "Keyword appearances": 13
+          },
+          {
+            "date": "2020-02-12",
+            "Keyword": "travel ban",
+            "Keyword appearances": 19
+          },
+          {
+            "date": "2020-02-13",
+            "Keyword": "travel ban",
+            "Keyword appearances": 48
+          },
+          {
+            "date": "2020-02-14",
+            "Keyword": "travel ban",
+            "Keyword appearances": 25
+          },
+          {
+            "date": "2020-02-15",
+            "Keyword": "travel ban",
+            "Keyword appearances": 31
+          },
+          {
+            "date": "2020-02-16",
+            "Keyword": "travel ban",
+            "Keyword appearances": 28
+          },
+          {
+            "date": "2020-02-17",
+            "Keyword": "travel ban",
+            "Keyword appearances": 21
+          },
+          {
+            "date": "2020-02-18",
+            "Keyword": "travel ban",
+            "Keyword appearances": 17
+          },
+          {
+            "date": "2020-02-19",
+            "Keyword": "travel ban",
+            "Keyword appearances": 12
+          },
+          {
+            "date": "2020-02-20",
+            "Keyword": "travel ban",
+            "Keyword appearances": 25
+          },
+          {"date": "2020-02-21", "Keyword": "travel ban", "Keyword appearances": 7},
+          {"date": "2020-02-22", "Keyword": "travel ban", "Keyword appearances": 2},
+          {
+            "date": "2020-02-23",
+            "Keyword": "travel ban",
+            "Keyword appearances": 18
+          },
+          {
+            "date": "2020-02-24",
+            "Keyword": "travel ban",
+            "Keyword appearances": 18
+          },
+          {
+            "date": "2020-02-25",
+            "Keyword": "travel ban",
+            "Keyword appearances": 11
+          },
+          {
+            "date": "2020-02-26",
+            "Keyword": "travel ban",
+            "Keyword appearances": 14
+          },
+          {
+            "date": "2020-02-27",
+            "Keyword": "travel ban",
+            "Keyword appearances": 10
+          },
+          {"date": "2020-02-28", "Keyword": "travel ban", "Keyword appearances": 7},
+          {
+            "date": "2020-02-29",
+            "Keyword": "travel ban",
+            "Keyword appearances": 28
+          },
+          {
+            "date": "2020-03-01",
+            "Keyword": "travel ban",
+            "Keyword appearances": 19
+          },
+          {
+            "date": "2020-03-02",
+            "Keyword": "travel ban",
+            "Keyword appearances": 14
+          },
+          {
+            "date": "2020-03-03",
+            "Keyword": "travel ban",
+            "Keyword appearances": 12
+          },
+          {"date": "2020-03-04", "Keyword": "travel ban", "Keyword appearances": 7},
+          {"date": "2020-03-05", "Keyword": "travel ban", "Keyword appearances": 7},
+          {"date": "2020-03-06", "Keyword": "travel ban", "Keyword appearances": 3},
+          {"date": "2020-03-07", "Keyword": "travel ban", "Keyword appearances": 7},
+          {"date": "2020-03-08", "Keyword": "travel ban", "Keyword appearances": 3},
+          {"date": "2020-03-09", "Keyword": "travel ban", "Keyword appearances": 6},
+          {
+            "date": "2020-03-10",
+            "Keyword": "travel ban",
+            "Keyword appearances": 29
+          },
+          {
+            "date": "2020-03-11",
+            "Keyword": "travel ban",
+            "Keyword appearances": 36
+          },
+          {
+            "date": "2020-03-12",
+            "Keyword": "travel ban",
+            "Keyword appearances": 32
+          },
+          {
+            "date": "2020-03-13",
+            "Keyword": "travel ban",
+            "Keyword appearances": 20
+          },
+          {
+            "date": "2020-03-14",
+            "Keyword": "travel ban",
+            "Keyword appearances": 35
+          },
+          {"date": "2020-03-15", "Keyword": "travel ban", "Keyword appearances": 9},
+          {
+            "date": "2020-03-16",
+            "Keyword": "travel ban",
+            "Keyword appearances": 10
+          },
+          {
+            "date": "2020-03-17",
+            "Keyword": "travel ban",
+            "Keyword appearances": 11
+          },
+          {"date": "2020-03-18", "Keyword": "travel ban", "Keyword appearances": 4},
+          {"date": "2020-03-19", "Keyword": "travel ban", "Keyword appearances": 1},
+          {"date": "2020-03-20", "Keyword": "travel ban", "Keyword appearances": 5},
+          {"date": "2020-03-21", "Keyword": "travel ban", "Keyword appearances": 5},
+          {"date": "2020-03-22", "Keyword": "travel ban", "Keyword appearances": 0},
+          {"date": "2020-03-23", "Keyword": "travel ban", "Keyword appearances": 4},
+          {"date": "2020-03-24", "Keyword": "travel ban", "Keyword appearances": 5},
+          {"date": "2020-03-25", "Keyword": "travel ban", "Keyword appearances": 4},
+          {"date": "2020-03-26", "Keyword": "travel ban", "Keyword appearances": 9},
+          {"date": "2020-03-27", "Keyword": "travel ban", "Keyword appearances": 7},
+          {"date": "2020-03-28", "Keyword": "travel ban", "Keyword appearances": 3},
+          {"date": "2020-03-29", "Keyword": "travel ban", "Keyword appearances": 6},
+          {"date": "2020-03-30", "Keyword": "travel ban", "Keyword appearances": 5},
+          {"date": "2020-03-31", "Keyword": "travel ban", "Keyword appearances": 4},
+          {
+            "date": "2020-04-01",
+            "Keyword": "travel ban",
+            "Keyword appearances": 31
+          },
+          {
+            "date": "2020-04-02",
+            "Keyword": "travel ban",
+            "Keyword appearances": 10
+          },
+          {"date": "2020-04-03", "Keyword": "travel ban", "Keyword appearances": 6},
+          {"date": "2020-04-04", "Keyword": "travel ban", "Keyword appearances": 7},
+          {"date": "2020-04-05", "Keyword": "travel ban", "Keyword appearances": 3},
+          {"date": "2020-04-06", "Keyword": "travel ban", "Keyword appearances": 9},
+          {"date": "2020-04-07", "Keyword": "travel ban", "Keyword appearances": 5},
+          {
+            "date": "2020-04-08",
+            "Keyword": "travel ban",
+            "Keyword appearances": 11
+          },
+          {"date": "2020-01-20", "Keyword": "treatment", "Keyword appearances": 33},
+          {"date": "2020-01-21", "Keyword": "treatment", "Keyword appearances": 34},
+          {"date": "2020-01-22", "Keyword": "treatment", "Keyword appearances": 17},
+          {"date": "2020-01-23", "Keyword": "treatment", "Keyword appearances": 33},
+          {"date": "2020-01-24", "Keyword": "treatment", "Keyword appearances": 18},
+          {"date": "2020-01-25", "Keyword": "treatment", "Keyword appearances": 19},
+          {"date": "2020-01-26", "Keyword": "treatment", "Keyword appearances": 40},
+          {"date": "2020-01-27", "Keyword": "treatment", "Keyword appearances": 24},
+          {"date": "2020-01-28", "Keyword": "treatment", "Keyword appearances": 45},
+          {"date": "2020-01-29", "Keyword": "treatment", "Keyword appearances": 20},
+          {"date": "2020-01-30", "Keyword": "treatment", "Keyword appearances": 25},
+          {"date": "2020-01-31", "Keyword": "treatment", "Keyword appearances": 34},
+          {"date": "2020-02-01", "Keyword": "treatment", "Keyword appearances": 43},
+          {"date": "2020-02-02", "Keyword": "treatment", "Keyword appearances": 65},
+          {"date": "2020-02-03", "Keyword": "treatment", "Keyword appearances": 50},
+          {"date": "2020-02-04", "Keyword": "treatment", "Keyword appearances": 47},
+          {"date": "2020-02-05", "Keyword": "treatment", "Keyword appearances": 80},
+          {"date": "2020-02-06", "Keyword": "treatment", "Keyword appearances": 43},
+          {"date": "2020-02-07", "Keyword": "treatment", "Keyword appearances": 45},
+          {"date": "2020-02-08", "Keyword": "treatment", "Keyword appearances": 29},
+          {"date": "2020-02-09", "Keyword": "treatment", "Keyword appearances": 40},
+          {"date": "2020-02-10", "Keyword": "treatment", "Keyword appearances": 23},
+          {"date": "2020-02-11", "Keyword": "treatment", "Keyword appearances": 42},
+          {"date": "2020-02-12", "Keyword": "treatment", "Keyword appearances": 36},
+          {"date": "2020-02-13", "Keyword": "treatment", "Keyword appearances": 46},
+          {"date": "2020-02-14", "Keyword": "treatment", "Keyword appearances": 24},
+          {"date": "2020-02-15", "Keyword": "treatment", "Keyword appearances": 59},
+          {"date": "2020-02-16", "Keyword": "treatment", "Keyword appearances": 60},
+          {"date": "2020-02-17", "Keyword": "treatment", "Keyword appearances": 27},
+          {"date": "2020-02-18", "Keyword": "treatment", "Keyword appearances": 41},
+          {"date": "2020-02-19", "Keyword": "treatment", "Keyword appearances": 77},
+          {"date": "2020-02-20", "Keyword": "treatment", "Keyword appearances": 70},
+          {"date": "2020-02-21", "Keyword": "treatment", "Keyword appearances": 21},
+          {"date": "2020-02-22", "Keyword": "treatment", "Keyword appearances": 7},
+          {"date": "2020-02-23", "Keyword": "treatment", "Keyword appearances": 9},
+          {"date": "2020-02-24", "Keyword": "treatment", "Keyword appearances": 42},
+          {"date": "2020-02-25", "Keyword": "treatment", "Keyword appearances": 33},
+          {"date": "2020-02-26", "Keyword": "treatment", "Keyword appearances": 28},
+          {"date": "2020-02-27", "Keyword": "treatment", "Keyword appearances": 30},
+          {"date": "2020-02-28", "Keyword": "treatment", "Keyword appearances": 29},
+          {"date": "2020-02-29", "Keyword": "treatment", "Keyword appearances": 30},
+          {"date": "2020-03-01", "Keyword": "treatment", "Keyword appearances": 35},
+          {"date": "2020-03-02", "Keyword": "treatment", "Keyword appearances": 44},
+          {"date": "2020-03-03", "Keyword": "treatment", "Keyword appearances": 55},
+          {"date": "2020-03-04", "Keyword": "treatment", "Keyword appearances": 25},
+          {"date": "2020-03-05", "Keyword": "treatment", "Keyword appearances": 27},
+          {"date": "2020-03-06", "Keyword": "treatment", "Keyword appearances": 20},
+          {"date": "2020-03-07", "Keyword": "treatment", "Keyword appearances": 43},
+          {"date": "2020-03-08", "Keyword": "treatment", "Keyword appearances": 12},
+          {"date": "2020-03-09", "Keyword": "treatment", "Keyword appearances": 31},
+          {"date": "2020-03-10", "Keyword": "treatment", "Keyword appearances": 32},
+          {"date": "2020-03-11", "Keyword": "treatment", "Keyword appearances": 36},
+          {"date": "2020-03-12", "Keyword": "treatment", "Keyword appearances": 36},
+          {"date": "2020-03-13", "Keyword": "treatment", "Keyword appearances": 38},
+          {"date": "2020-03-14", "Keyword": "treatment", "Keyword appearances": 20},
+          {"date": "2020-03-15", "Keyword": "treatment", "Keyword appearances": 18},
+          {"date": "2020-03-16", "Keyword": "treatment", "Keyword appearances": 30},
+          {"date": "2020-03-17", "Keyword": "treatment", "Keyword appearances": 45},
+          {"date": "2020-03-18", "Keyword": "treatment", "Keyword appearances": 47},
+          {"date": "2020-03-19", "Keyword": "treatment", "Keyword appearances": 53},
+          {"date": "2020-03-20", "Keyword": "treatment", "Keyword appearances": 59},
+          {"date": "2020-03-21", "Keyword": "treatment", "Keyword appearances": 62},
+          {"date": "2020-03-22", "Keyword": "treatment", "Keyword appearances": 51},
+          {"date": "2020-03-23", "Keyword": "treatment", "Keyword appearances": 85},
+          {"date": "2020-03-24", "Keyword": "treatment", "Keyword appearances": 47},
+          {"date": "2020-03-25", "Keyword": "treatment", "Keyword appearances": 74},
+          {"date": "2020-03-26", "Keyword": "treatment", "Keyword appearances": 40},
+          {"date": "2020-03-27", "Keyword": "treatment", "Keyword appearances": 64},
+          {"date": "2020-03-28", "Keyword": "treatment", "Keyword appearances": 54},
+          {"date": "2020-03-29", "Keyword": "treatment", "Keyword appearances": 67},
+          {"date": "2020-03-30", "Keyword": "treatment", "Keyword appearances": 64},
+          {"date": "2020-03-31", "Keyword": "treatment", "Keyword appearances": 40},
+          {"date": "2020-04-01", "Keyword": "treatment", "Keyword appearances": 52},
+          {"date": "2020-04-02", "Keyword": "treatment", "Keyword appearances": 65},
+          {"date": "2020-04-03", "Keyword": "treatment", "Keyword appearances": 84},
+          {"date": "2020-04-04", "Keyword": "treatment", "Keyword appearances": 92},
+          {
+            "date": "2020-04-05",
+            "Keyword": "treatment",
+            "Keyword appearances": 116
+          },
+          {
+            "date": "2020-04-06",
+            "Keyword": "treatment",
+            "Keyword appearances": 128
+          },
+          {"date": "2020-04-07", "Keyword": "treatment", "Keyword appearances": 64},
+          {"date": "2020-04-08", "Keyword": "treatment", "Keyword appearances": 76},
+          {"date": "2020-01-20", "Keyword": "mask", "Keyword appearances": 41},
+          {"date": "2020-01-21", "Keyword": "mask", "Keyword appearances": 60},
+          {"date": "2020-01-22", "Keyword": "mask", "Keyword appearances": 70},
+          {"date": "2020-01-23", "Keyword": "mask", "Keyword appearances": 128},
+          {"date": "2020-01-24", "Keyword": "mask", "Keyword appearances": 98},
+          {"date": "2020-01-25", "Keyword": "mask", "Keyword appearances": 162},
+          {"date": "2020-01-26", "Keyword": "mask", "Keyword appearances": 177},
+          {"date": "2020-01-27", "Keyword": "mask", "Keyword appearances": 208},
+          {"date": "2020-01-28", "Keyword": "mask", "Keyword appearances": 140},
+          {"date": "2020-01-29", "Keyword": "mask", "Keyword appearances": 221},
+          {"date": "2020-01-30", "Keyword": "mask", "Keyword appearances": 217},
+          {"date": "2020-01-31", "Keyword": "mask", "Keyword appearances": 200},
+          {"date": "2020-02-01", "Keyword": "mask", "Keyword appearances": 196},
+          {"date": "2020-02-02", "Keyword": "mask", "Keyword appearances": 162},
+          {"date": "2020-02-03", "Keyword": "mask", "Keyword appearances": 167},
+          {"date": "2020-02-04", "Keyword": "mask", "Keyword appearances": 182},
+          {"date": "2020-02-05", "Keyword": "mask", "Keyword appearances": 194},
+          {"date": "2020-02-06", "Keyword": "mask", "Keyword appearances": 190},
+          {"date": "2020-02-07", "Keyword": "mask", "Keyword appearances": 200},
+          {"date": "2020-02-08", "Keyword": "mask", "Keyword appearances": 181},
+          {"date": "2020-02-09", "Keyword": "mask", "Keyword appearances": 200},
+          {"date": "2020-02-10", "Keyword": "mask", "Keyword appearances": 156},
+          {"date": "2020-02-11", "Keyword": "mask", "Keyword appearances": 180},
+          {"date": "2020-02-12", "Keyword": "mask", "Keyword appearances": 187},
+          {"date": "2020-02-13", "Keyword": "mask", "Keyword appearances": 178},
+          {"date": "2020-02-14", "Keyword": "mask", "Keyword appearances": 252},
+          {"date": "2020-02-15", "Keyword": "mask", "Keyword appearances": 222},
+          {"date": "2020-02-16", "Keyword": "mask", "Keyword appearances": 187},
+          {"date": "2020-02-17", "Keyword": "mask", "Keyword appearances": 157},
+          {"date": "2020-02-18", "Keyword": "mask", "Keyword appearances": 197},
+          {"date": "2020-02-19", "Keyword": "mask", "Keyword appearances": 182},
+          {"date": "2020-02-20", "Keyword": "mask", "Keyword appearances": 186},
+          {"date": "2020-02-21", "Keyword": "mask", "Keyword appearances": 123},
+          {"date": "2020-02-22", "Keyword": "mask", "Keyword appearances": 25},
+          {"date": "2020-02-23", "Keyword": "mask", "Keyword appearances": 148},
+          {"date": "2020-02-24", "Keyword": "mask", "Keyword appearances": 192},
+          {"date": "2020-02-25", "Keyword": "mask", "Keyword appearances": 94},
+          {"date": "2020-02-26", "Keyword": "mask", "Keyword appearances": 100},
+          {"date": "2020-02-27", "Keyword": "mask", "Keyword appearances": 111},
+          {"date": "2020-02-28", "Keyword": "mask", "Keyword appearances": 107},
+          {"date": "2020-02-29", "Keyword": "mask", "Keyword appearances": 170},
+          {"date": "2020-03-01", "Keyword": "mask", "Keyword appearances": 173},
+          {"date": "2020-03-02", "Keyword": "mask", "Keyword appearances": 206},
+          {"date": "2020-03-03", "Keyword": "mask", "Keyword appearances": 150},
+          {"date": "2020-03-04", "Keyword": "mask", "Keyword appearances": 186},
+          {"date": "2020-03-05", "Keyword": "mask", "Keyword appearances": 144},
+          {"date": "2020-03-06", "Keyword": "mask", "Keyword appearances": 92},
+          {"date": "2020-03-07", "Keyword": "mask", "Keyword appearances": 164},
+          {"date": "2020-03-08", "Keyword": "mask", "Keyword appearances": 43},
+          {"date": "2020-03-09", "Keyword": "mask", "Keyword appearances": 111},
+          {"date": "2020-03-10", "Keyword": "mask", "Keyword appearances": 82},
+          {"date": "2020-03-11", "Keyword": "mask", "Keyword appearances": 51},
+          {"date": "2020-03-12", "Keyword": "mask", "Keyword appearances": 29},
+          {"date": "2020-03-13", "Keyword": "mask", "Keyword appearances": 116},
+          {"date": "2020-03-14", "Keyword": "mask", "Keyword appearances": 68},
+          {"date": "2020-03-15", "Keyword": "mask", "Keyword appearances": 46},
+          {"date": "2020-03-16", "Keyword": "mask", "Keyword appearances": 34},
+          {"date": "2020-03-17", "Keyword": "mask", "Keyword appearances": 41},
+          {"date": "2020-03-18", "Keyword": "mask", "Keyword appearances": 52},
+          {"date": "2020-03-19", "Keyword": "mask", "Keyword appearances": 61},
+          {"date": "2020-03-20", "Keyword": "mask", "Keyword appearances": 98},
+          {"date": "2020-03-21", "Keyword": "mask", "Keyword appearances": 99},
+          {"date": "2020-03-22", "Keyword": "mask", "Keyword appearances": 107},
+          {"date": "2020-03-23", "Keyword": "mask", "Keyword appearances": 95},
+          {"date": "2020-03-24", "Keyword": "mask", "Keyword appearances": 71},
+          {"date": "2020-03-25", "Keyword": "mask", "Keyword appearances": 76},
+          {"date": "2020-03-26", "Keyword": "mask", "Keyword appearances": 114},
+          {"date": "2020-03-27", "Keyword": "mask", "Keyword appearances": 106},
+          {"date": "2020-03-28", "Keyword": "mask", "Keyword appearances": 123},
+          {"date": "2020-03-29", "Keyword": "mask", "Keyword appearances": 140},
+          {"date": "2020-03-30", "Keyword": "mask", "Keyword appearances": 187},
+          {"date": "2020-03-31", "Keyword": "mask", "Keyword appearances": 170},
+          {"date": "2020-04-01", "Keyword": "mask", "Keyword appearances": 145},
+          {"date": "2020-04-02", "Keyword": "mask", "Keyword appearances": 393},
+          {"date": "2020-04-03", "Keyword": "mask", "Keyword appearances": 432},
+          {"date": "2020-04-04", "Keyword": "mask", "Keyword appearances": 265},
+          {"date": "2020-04-05", "Keyword": "mask", "Keyword appearances": 242},
+          {"date": "2020-04-06", "Keyword": "mask", "Keyword appearances": 214},
+          {"date": "2020-04-07", "Keyword": "mask", "Keyword appearances": 214},
+          {"date": "2020-04-08", "Keyword": "mask", "Keyword appearances": 221}
+        ]
       }
+    }
 }
