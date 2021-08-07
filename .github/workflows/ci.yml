@@ -20,7 +20,7 @@ jobs:
         uses: dawidd6/action-download-artifact@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          workflow: ci.yml
+          workflow: publish.yml
           workflow_conclusion: success
           branch: main
           path: dynophores_webclient
