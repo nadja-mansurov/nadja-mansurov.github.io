@@ -14,6 +14,6 @@ jobs:
           workflow: ci.yml
           workflow_conclusion: success
           branch: workflow
-          path: /dynophores_webclient/
+          path: dynophores_webclient
           repo: nadja-mansurov/dyno_webapp
           name: code-build
