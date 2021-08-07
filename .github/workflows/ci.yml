@@ -15,5 +15,5 @@ jobs:
           workflow_conclusion: success
           branch: workflow
           path: /dynophores_webclient/
-          repo: dyno_webapp
+          repo: https://github.com/nadja-mansurov/dyno_webapp
           name: code-build
