@@ -10,7 +10,7 @@ jobs:
       - name: Download artifact
         uses: dawidd6/action-download-artifact@v2
         with:
-          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          github_token: ${{ GITHUB_TOKEN }}
           workflow: ci.yml
           workflow_conclusion: success
           path: /dynophores_webclient/
