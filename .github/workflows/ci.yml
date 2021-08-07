@@ -22,7 +22,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           workflow: ci.yml
           workflow_conclusion: success
-          branch: workflow
+          branch: main
           path: dynophores_webclient
           repo: nadja-mansurov/dyno_webapp
           name: code-build
