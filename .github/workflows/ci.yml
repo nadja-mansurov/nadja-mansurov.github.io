@@ -17,3 +17,18 @@ jobs:
           path: dynophores_webclient
           repo: nadja-mansurov/dyno_webapp
           name: code-build
+
+      - uses: EndBug/add-and-commit@v7
+        with:
+          add: '.'
+          branch: gh-pages
+          cwd: './dynophores_webclient'
+          message: 'Update prod'
+          push: true
+          remove: './dynophores_webclient/index.html'
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: .
