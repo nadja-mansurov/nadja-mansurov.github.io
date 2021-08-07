@@ -1,0 +1,16 @@
+name: CI
+on:
+  push:
+    branches: [gh-pages]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{ secrets.PERSONAL_TOKEN }}
+          workflow: ci.yml
+          workflow_conclusion: success
+          path: /dynophores_webclient/
