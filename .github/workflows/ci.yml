@@ -26,7 +26,7 @@ jobs:
           cwd: './dynophores_webclient'
           message: 'Update prod'
           push: true
-          remove: './dynophores_webclient/**'
+          remove: './dynophores_webclient/.'
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
