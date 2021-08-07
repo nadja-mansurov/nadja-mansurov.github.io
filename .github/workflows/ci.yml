@@ -8,6 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Remove Files
+        uses: JesseTG/rm@v1.0.2
+        with:
+          path: dynophores_webclient/
+
       - name: Download artifact
         uses: dawidd6/action-download-artifact@v2
         with:
@@ -18,7 +24,7 @@ jobs:
           path: dynophores_webclient
           repo: nadja-mansurov/dyno_webapp
           name: code-build
-
+          
       - uses: EndBug/add-and-commit@v7
         with:
           add: '.'
@@ -26,7 +32,6 @@ jobs:
           cwd: './dynophores_webclient'
           message: 'Update prod'
           push: true
-          remove: './dynophores_webclient/.'
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
