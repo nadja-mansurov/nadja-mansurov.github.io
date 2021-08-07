@@ -3,6 +3,7 @@ on:
   push:
     branches: [gh-pages]
   repository_dispatch:
+  workflow_dispatch:
 
 jobs:
   build:
