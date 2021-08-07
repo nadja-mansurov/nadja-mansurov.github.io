@@ -15,3 +15,4 @@ jobs:
           workflow_conclusion: success
           path: /dynophores_webclient/
           repo: dyno_webapp
+          name: code-build
